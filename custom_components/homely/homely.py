@@ -1,3 +1,5 @@
+"""Homely API client."""
+
 import asyncio
 from datetime import datetime, timedelta
 import json
@@ -17,7 +19,7 @@ class ResponseError(HomelyError):
     """Unexcpected response."""
 
     def __init__(self, status_code, text) -> None:
-        """ "Initialize Response Error."""
+        """Initialize Response Error."""
         super().__init__(f"Invalid response, status code: {status_code} - Data: {text}")
 
 
@@ -99,9 +101,9 @@ class Homely:
 
         except ClientError as ex:
             raise RequestFailed(f"Homely unexpected error {url} ({ex=})") from Homely
-        except TimeoutError:
+        except TimeoutError as ex:
             _LOGGER.exception("Homely, request timed out")
-            raise RequestFailed("Request timeout") from Homely
+            raise RequestFailed("Request timeout") from ex
 
     async def _refresh_access_token(self):
         """Request API ti refresh the Acces-token."""

@@ -37,7 +37,7 @@
             "system_state": {
                 "name": "Tilstand",
                 "state": {
-                    "state_disarmed": "Dektivert",
+                    "state_disarmed": "Deaktivert",
                     "state_armed_away": "Helsikring",
                     "state_armed_home": "Skallsikring",
                     "state_armed_night": "Nattsikring",
@@ -48,7 +48,7 @@
                 "state_attributes": {
                     "options": {
                         "state": {
-                          "state_disarmed": "Dektivert",
+                          "state_disarmed": "Deaktivert",
                           "state_armed_away": "Helsikring",
                           "state_armed_home": "Skallsikring",
                           "state_armed_night": "Nattsikring",
