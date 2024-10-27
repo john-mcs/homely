@@ -1,0 +1,64 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Homely",
+        "description": "Enter credentials for the Homely user account which you want Home Assistant to use.",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        },
+        "data_description": {
+          "username": "It is recommended to create a Homely Account specifically for Home Assistant. The account must be Administrator or Owner."
+        }
+      },
+      "installation": {
+        "title": "Configure Homely",
+        "data":{
+          "location": "Location"
+        },
+        "data_description": {
+          "location": "This account have access to multiple locations (gateways). Select the one you want to add to Home Assistant."
+        }
+      }
+    },
+    "error": {
+      "response_error": "Unknown error while connecting to Homely API",
+      "invalid_auth": "Invalid username or password"
+    },
+    "abort": {
+      "already_configured": "Device is already configured",
+      "locations_none": "No locations available for this accout. Make sure that the account has the Administrator user level.",
+      "locations_error": "Error retrieving the users locations from Homely."
+    }
+  },
+  "entity": {
+        "sensor": {
+            "system_state": {
+                "name": "State",
+                "state": {
+                    "state_disarmed": "Disarmed",
+                    "state_armed_away": "Armed Away",
+                    "state_armed_home": "Armed Home",
+                    "state_armed_night": "Armed Night",
+                    "state_breached": "Breached",
+                    "state_pending": "Pending",
+                    "state_unknown": "Unknown"
+                },
+                "state_attributes": {
+                    "options": {
+                        "state": {
+                          "state_disarmed": "Disarmed",
+                          "state_armed_away": "Armed Away",
+                          "state_armed_home": "Armed Home",
+                          "state_armed_night": "Armed Night",
+                          "state_breached": "Breached",
+                          "state_pending": "Pending",
+                          "state_unknown": "Unknown"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

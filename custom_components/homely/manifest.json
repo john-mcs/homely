@@ -1,0 +1,13 @@
+{
+    "domain": "homely",
+    "name": "Homely",
+    "codeowners": [],
+    "dependencies": [],
+    "documentation": "https://www.homely.no",
+    "integration_type": "hub",
+    "iot_class": "cloud_polling",
+    "requirements": [],
+    "config_flow": true,
+    "loggers": ["custom_components.homely"],
+    "version": "1.0.0"
+  }

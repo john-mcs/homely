@@ -1,0 +1,64 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Konfigurer Homely",
+        "description": "Logg inn med Homely-brukerkonto som Home Assistant skal bruke.",
+        "data": {
+          "username": "Brukernavn",
+          "password": "Passord"
+        },
+        "data_description": {
+          "username": "Det anbefales å opprette en dedikert Homely-bruker til Home Assistant. Kontoen må være av typen Administrator eller Eier."
+        }
+      },
+      "installation": {
+        "title": "Konfigurer Homely",
+        "data":{
+          "location": "Lokasjon"
+        },
+        "data_description": {
+          "location": "Denne brukeren har tilgang til flere lokasjoner. Velg den du vil legge til i Home Assistant."
+        }
+      }
+    },
+    "error": {
+      "response_error": "Kunne ikke koble til Homely API",
+      "invalid_auth": "Ugyldig brukernavn eller passord"
+    },
+    "abort": {
+      "already_configured": "Denne enheten er allerede konfigurert",
+      "locations_none": "Ingen lokasjoner er tilgjengelig for denne brukerkontoen. Sjekk at brukeren har Administratortilgang.",
+      "locations_error": "En feil oppstod ved innhenting av lokasjoner fra Homely."
+    }
+  },
+  "entity": {
+        "sensor": {
+            "system_state": {
+                "name": "Tilstand",
+                "state": {
+                    "state_disarmed": "Dektivert",
+                    "state_armed_away": "Helsikring",
+                    "state_armed_home": "Skallsikring",
+                    "state_armed_night": "Nattsikring",
+                    "state_breached": "Utløst",
+                    "state_pending": "Venter",
+                    "state_unknown": "Ukjent"
+                },
+                "state_attributes": {
+                    "options": {
+                        "state": {
+                          "state_disarmed": "Dektivert",
+                          "state_armed_away": "Helsikring",
+                          "state_armed_home": "Skallsikring",
+                          "state_armed_night": "Nattsikring",
+                          "state_breached": "Utløst",
+                          "state_pending": "Venter",
+                          "state_unknown": "Ukjent"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

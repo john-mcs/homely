@@ -1,0 +1,16 @@
+{
+  "entity": {
+    "sensor": {
+      "system_state": {
+        "default": "mdi:shield-home-outline",
+        "state": {
+          "state_disarmed": "mdi:shield-lock-open",
+          "state_armed_away": "mdi:shield-lock",
+          "state_armed_night": "mdi:shield-moon",
+          "state_armed_home": "mdi:shield-home",
+          "state_breached": "mdi:alarm-bell"
+        }
+      }
+    }
+  }
+}
