@@ -53,15 +53,16 @@ class HomelyAlarmState(CoordinatorEntity[HomelyDataUpdateCoordinator], SensorEnt
 
     # Alarm state translations
     # In case Homely change the states.
+    # Pending states are during entry/exit-delay
     _alarm_states = {
         "DISARMED": STATE_DISARMED,
         "ARMED_AWAY": STATE_ARMED_AWAY,
         "ARMED_STAY": STATE_ARMED_HOME,
         "ARMED_NIGHT": STATE_ARMED_NIGHT,
         "BREACHED": STATE_BREACHED,
-        "ALARM_PENDING": STATE_PENDING,
-        "ALARM_STAY_PENDING": STATE_PENDING,
-        "ARMED_NIGHT_PENDING": STATE_PENDING,
+        "ARM_PENDING": STATE_PENDING,
+        "ARM_STAY_PENDING": STATE_PENDING,
+        "ARM_NIGHT_PENDING": STATE_PENDING,
         "UNKNOWN": STATE_UNKNOWN,
     }
 
