@@ -10,4 +10,4 @@ for example by using the Samba share add-on.
 
 If the /config/custom_components directory does not exist already, just create it. 
 
-Restart home-assistant, and thoe Homely integration should be available to add under settings. 
+Restart home-assistant, and the Homely integration should be available to add under settings. 
